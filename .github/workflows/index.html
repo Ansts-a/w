@@ -1,0 +1,93 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цайгер Юрій Петрович</title>
+    <link rel="stylesheet" href="https://yurii20000.github.io/p/foot.css"> <!-- Підключення CSS стилів -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Головна</a></li>
+                <li><a href="#about">Про мене</a></li>
+                <li><a href="#projects">Практичні роботи</a></li>
+                <li><a href="#labs">Лабораторні заняття</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Цайгер Юрій Петрович</h1>
+    </section>
+    <section id="about">
+        <h2>Про мене</h2>
+        <img src="profile.jpg" alt="Фото студента">
+        <p>Цайгер Юрій Петрович Група ТЦР-23.</p>
+    </section>
+    <section id="projects">
+        <h2>Практичні роботи</h2>
+        <ul>
+            <li><a href="practical1.html">Практична робота 1</a> - Короткий опис завдання.</li>
+            <li><a href="practical2.html">Практична робота 2</a> - Короткий опис завдання.</li>
+            <!-- Додайте інші практичні роботи -->
+        </ul>
+    </section>
+    <section id="labs">
+        <h2>Лабораторні заняття</h2>
+        <ul>
+            <li><a href="labs/lab1/lab1.html">Лабораторне заняття 1</a> - Короткий опис завдання.</li>
+            <li><a href="labs/lab2/lab2.html">Лабораторне заняття 2</a> - Короткий опис завдання.</li>
+            <li><a href="labs/lab3/lab3.html">Лабораторне заняття 3</a> - Короткий опис завдання.</li>
+            <li><a href="labs/lab4/lab4.html">Лабораторне заняття 4</a> - Короткий опис завдання.</li>
+            <li><a href="labs/lab5/lab5.html">Лабораторне заняття 5</a> - Короткий опис завдання.</li>
+            <li><a href="labs/lab6/lab6.html">Лабораторне заняття 6</a> - Короткий опис завдання.</li>
+            <li><a href="labs/lab7/lab7.html">Лабораторне заняття 7</a> - Короткий опис завдання.</li>
+            <!-- Додайте інші лабораторні заняття -->
+        </ul>
+    </section>
+    <footer>
+        <p>Контактні дані студента</p>
+        <p>Посилання на соціальні мережі: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+        <p>Роки навчання: 20XX - 20XX</p>
+        <p>GitHub: <a href="https://github.com/username">github.com/username</a></p>
+    </footer>
+</body>
+</html>
+
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
